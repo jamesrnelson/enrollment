@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  resources :students
+  resources :addresses
+  resources :students do
+    resources :addresses
+  end
 end

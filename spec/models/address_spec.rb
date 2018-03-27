@@ -28,7 +28,8 @@ describe Address, type: :model do
       expect(address1).to be_invalid
     end
     it 'should be Valid with all attributes ' do
-      address1 = Address.new(description: 'blah', street_address: '123 Main St.', city: 'Anytown', state: 'PA', zip_code: 54321)
+      student1 = Student.create!(name: 'Joe')
+      address1 = student1.addresses.new(description: 'blah', street_address: '123 Main St.', city: 'Anytown', state: 'PA', zip_code: 54321)
 
       expect(address1).to be_valid
     end
