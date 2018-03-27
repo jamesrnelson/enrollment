@@ -10,7 +10,7 @@ describe 'User' do
 
       expect(page).to have_current_path('/students/new')
 
-      click_on 'See all students'
+      click_on 'See All Students'
 
       expect(page).to have_current_path('/students')
     end
